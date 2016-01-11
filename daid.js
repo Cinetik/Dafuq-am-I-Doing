@@ -14,9 +14,15 @@ mantisClient.initialize().then(function(client){
 		var table = new Table({
 			head: ['ID', 'Project', 'Description']
 		});
-		result.item.forEach(function(issue) {
+		if(result.item && result.item instanceof Array) {
+			result.item.forEach(function(issue) {
+				table.push([issue.id.$value, issue.project.name.$value, issue.summary.$value]);
+			});
+		}
+		else {
+			var issue = result.item;
 			table.push([issue.id.$value, issue.project.name.$value, issue.summary.$value]);
-		});
+		}
 		console.log(table.toString());
 	})
 	.catch(function(reason) {
