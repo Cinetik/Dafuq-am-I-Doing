@@ -14,12 +14,9 @@ mantisClient.initialize().then(function(client){
 		var table = new Table({
 			head: ['ID', 'Project', 'Description']
 		});
-		// result.item.forEach(function(issue) {
-		// 	table.push([issue.id.$value, issue.project.name.$value, issue.summary.$value]);
-		// });
-		table.push([12341, 'random project', 'fix the godamm bug !']);
-		table.push([3452, 'Slack config', 'Make hubot say hello on ssh connect']);
-		table.push([64241, 'Take over the world', 'Make a plan for tonight']);
+		result.item.forEach(function(issue) {
+			table.push([issue.id.$value, issue.project.name.$value, issue.summary.$value]);
+		});
 		console.log(table.toString());
 	})
 	.catch(function(reason) {
