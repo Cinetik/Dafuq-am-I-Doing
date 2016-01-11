@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 'use strict';
-var config = require('config');
+var config = require('./config/default.json');
 var Mantis = require('./lib/mantis');
 var Table = require('cli-table');
 var userargs = process.argv;
