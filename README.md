@@ -6,7 +6,7 @@ A simple CLI script returning your currently assigned issues on Mantis bugtracke
 
 * Clone this rep
 * ``` npm install ```
-* Edit config/default.json with your credentials
+* Edit config/default.json with your credentials. Provide the WSDL url.
 * ``` npm link ```
 
 ## Use it
