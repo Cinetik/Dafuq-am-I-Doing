@@ -12,17 +12,17 @@ var mantisClient = new Mantis(config.url, config.username, config.password);
 mantisClient.initialize().then(function(client){
 	mantisClient.getUserIssues().then(function(result) {
 		var table = new Table({
-			head: ['ID', 'Project', 'Description']
+			head: ['ID', 'Project', 'Description','Status']
 		});
 		if (result.item instanceof Array) {
 			result.item.forEach(function(issue) {
-				table.push([issue.id.$value, issue.project.name.$value, issue.summary.$value]);
+				table.push([issue.id.$value, issue.project.name.$value, issue.summary.$value, issue.status.name.$value]);
 			});
 			console.log(table.toString());
 		}
 		else if (result.item){
 			var issue = result.item;
-			table.push([issue.id.$value, issue.project.name.$value, issue.summary.$value]);
+			table.push([issue.id.$value, issue.project.name.$value, issue.summary.$value, issue.status.name.$value]);
 			console.log(table.toString());
 		} else{
 			console.log('You have nothing assigned. Dafuq you doing ?!');
