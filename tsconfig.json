@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+        "target": "ES5",
+        "noImplicitAny": false,
+        "declaration": true,
+        "sourceMap": false,
+        "outDir": "./build",
+        "typeRoots": [
+            "node_modules/@types"
+        ]
+    },
+    "exclude": [
+        "./build",
+        "./node_modules"
+    ]
+}

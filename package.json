@@ -1,23 +1,30 @@
 {
   "name": "daid",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Dafuq am I doing ?",
   "main": "daid",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "mantis"
+    "mantis", "jira"
   ],
   "author": "Cinetik",
   "license": "ISC",
   "dependencies": {
-    "cli-table": "^0.3.1",
-    "config": "^1.17.1",
+    "grunt": "^1.0.1",
+    "grunt-cli": "^1.2.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-ts": "^6.0.0-beta.11",
+    "grunt-tslint": "^4.0.0",
     "request": "^2.67.0",
-    "soap": "^0.11.1"
-},
-  "bin": {
-	  "daid": "daid.js"
+    "soap": "^0.11.1",
+    "table-layout": "^0.4.0",
+    "tslint": "^4.4.2",
+    "typescript": "^2.1.6"
+  },
+  "devDependencies": {
+    "@types/request": "0.0.39",
+    "@types/soap": "0.0.31"
   }
 }
